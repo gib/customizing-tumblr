@@ -1,0 +1,50 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "AdobeGaramondProRegular", Georgia, Serif;
+  font-size: 20px;
+}
+a {
+  color: #00b7ff;
+}
+em {
+  font-family: "AdobeGaramondProItalic", Georgia, Serif;
+}
+h1 {
+  margin: 0;
+  font-size: 50px;
+  font-family: "ITCAvantGardeGothicStdDemi", Helvetica, Arial, Sans-Serif;
+  text-transform: uppercase;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}
+footer img {
+  float: left;
+  margin: 20px;
+}
+footer p {
+  float: left;
+}
+section blockquote {
+  font-size: 45px;
+  width: 450px;
+  line-height: 1.5em;
+  text-align: center;
+}
+section blockquote em {
+  clear: both;
+  color: #aaa;
+  float: right;
+  margin-right: 20px;
+}
+section ul {
+  margin-top: 40px;
+  margin-left: 100px;
+}
+section li {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
