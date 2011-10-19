@@ -1,8 +1,7 @@
 header
   h1 Custom Tumblr Theme Walk-through
 
-
-ol.steps
+ol#nav
   li Introduction
   li Layout
   li Post Types
@@ -75,17 +74,18 @@ article
     p This is our simple initial HTML5 markup.
 
     pre
-      <!DOCTYPE HTML>
-      <html>
+      :cdata
+        <!DOCTYPE HTML>
+        <html>
 
-        <head>
-          <title></title>
-        </head>
+          <head>
+            <title></title>
+          </head>
 
-        <body>
-        </body>
+          <body>
+          </body>
 
-      </html>
+        </html>
 
   section
     h2 Describing Posts in HTML
@@ -113,21 +113,22 @@ article
       | If a visitor's browser doesn't need it, the file won't be included.
 
     pre
-      <!DOCTYPE HTML>
-      <html>
+      :cdata
+        <!DOCTYPE HTML>
+        <html>
 
-        <head>
-          <title></title>
-          <!-- This JavaScript file will make older versions of IE recognize new HTML5 tags. -->
-          <!--[if lt IE 9]>
-            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-          <![endif]-->
-        </head>
+          <head>
+            <title></title>
+            <!-- This JavaScript file will make older versions of IE recognize new HTML5 tags. -->
+            <!--[if lt IE 9]>
+              <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+          </head>
 
-        <body>
-        </body>
+          <body>
+          </body>
 
-      </html>
+        </html>
 
     p 
       | Let's add an element to hold our posts and give it an id value of <code>posts</code>.
@@ -135,33 +136,34 @@ article
       | We'll add the <code>article</code> tags to this post.
 
     pre
-      <!DOCTYPE HTML>
-      <html>
+      :cdata
+        <!DOCTYPE HTML>
+        <html>
 
-        <head>
-          <title></title>
-          <!-- This JavaScript file will make older versions of IE recognize new HTML5 tags. -->
-          <!--[if lt IE 9]>
-            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-          <![endif]-->
-        </head>
+          <head>
+            <title></title>
+            <!-- This JavaScript file will make older versions of IE recognize new HTML5 tags. -->
+            <!--[if lt IE 9]>
+              <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+          </head>
 
-        <body>
-          <!-- This element holds all of our posts. There is only one of them. -->
-          <div id="posts">
-            <article class="text"></article>
-            <article class="photo"></article>
-            <article class="photoset"></article>
-            <article class="quote"></article>
-            <article class="link"></article>
-            <article class="chat"></article>
-            <article class="audio"></article>
-            <article class="video"></article>
-            <article class="answer"></article>
-          </div>
-        </body>
+          <body>
+            <!-- This element holds all of our posts. There is only one of them. -->
+            <div id="posts">
+              <article class="text"></article>
+              <article class="photo"></article>
+              <article class="photoset"></article>
+              <article class="quote"></article>
+              <article class="link"></article>
+              <article class="chat"></article>
+              <article class="audio"></article>
+              <article class="video"></article>
+              <article class="answer"></article>
+            </div>
+          </body>
 
-      </html>
+        </html>
 
     p
       | You may have noticed that we used a <code>class</code> attribute, <code>class="photo"</code> to 
@@ -183,12 +185,11 @@ article
         | Text posts are made up of an optional title and a body.
         | The body can contain HTML, so this may be an area that could use some targeted CSS styling.
         | <a href="http://www.tumblr.com/docs/en/custom_themes#text-posts">More in the docs.</a>
-      pre
+      pre.
         <!-- 
           Post Type: Text
-          {block:Title}{/block:Title}
-          {Title}: Post Title
-          {Body}: 
+          Title: Post Title
+          Body: 
         -->
         <article class="text">
           <h2>Post Title</h2>
@@ -196,8 +197,8 @@ article
             This is a sample post.
           </p>
         </article>
-        p
-          | Let's take this party over to JSFiddle for some styling...
+      p
+        | Let's take this party over to JSFiddle for some styling...
 
     section
       h3 Photo
@@ -205,7 +206,7 @@ article
         | Photo posts can potentially have quite a bit of information, but the basics are
         | a photo and a caption.
         | <a href="http://www.tumblr.com/docs/en/custom_themes#photo-posts">More in the docs.</a>
-      pre
+      pre.
         <!-- 
           Post Type: Photo
         -->

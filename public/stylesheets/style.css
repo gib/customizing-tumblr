@@ -19,6 +19,11 @@ body {
 a,
 a:visited {
   color: #00b7ff;
+  text-decoration: none;
+}
+a:hover,
+a:visited:hover {
+  color: #4db9ff;
 }
 h1 {
   margin: 0;
@@ -48,17 +53,15 @@ footer p {
 .welcome {
   margin-top: -60px;
 }
-.slide blockquote {
-  font-size: 45px;
-  width: 450px;
-  line-height: 1.5em;
-  text-align: center;
+.slide h1 {
+  letter-spacing: 3px;
 }
-.slide blockquote em {
-  clear: both;
-  color: #aaa;
-  float: right;
-  margin-right: 20px;
+.slide ul {
+  margin-left: 1em;
+}
+.slide li {
+  font-size: 45px;
+  line-height: 2em;
 }
 .off-stage .slide {
   display: none;

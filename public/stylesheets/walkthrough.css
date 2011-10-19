@@ -1,3 +1,7 @@
+#nav {
+  background-color: #ccc;
+  float: left;
+}
 textarea {
   width: 400px;
 }
