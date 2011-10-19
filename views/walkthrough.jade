@@ -1,0 +1,105 @@
+header
+  h1 Custom Tumblr Theme Walk-through
+
+
+ol.steps
+  li Introduction
+  li Layout
+  li Post Types
+  li Extras
+  li Tumblr Theme Blocks and Variables
+  li Where to go for help
+
+
+article
+  section
+    h2 Introduction
+    p 
+      | This document will walk you through creating a basic Tumblr theme.
+      | While knowledge of HTML and CSS are required, the familiar framework
+      | of a blog is a great place for new developers to start.
+    
+  section
+    h2 Layout
+    p 
+      | CSS layouts can be challenging. 
+      | For this theme, we're going to keep it simple. We'll start small and build from there, 
+      | but when you want to dig deeper, these CSS frameworks can offer a lot of power.
+
+    table
+      tr
+        th Framework
+        th Description
+      tr
+        td 
+          a(href="http://getskeleton.com/") Skeleton
+        td 
+          | Skeleton is a small collection of CSS &amp; JS files that can help you 
+          | rapidly develop sites that look beautiful at any size, be it a 17" 
+          | laptop screen or an iPhone.
+      tr
+        td 
+          a(href="http://html5boilerplate.com/") HTML5 Boilerplate
+        td 
+          | HTML5 Boilerplate is the professional badass's 
+          | base HTML/CSS/JS template for a fast, robust and future-proof site.
+      tr
+        td 
+          a(href="http://960.gs/") 960 Grid System
+        td 
+          | The 960 Grid System is an effort to streamline web development workflow 
+          | by providing commonly used dimensions, based on a width of 960 pixels. 
+          | There are two variants: 12 and 16 columns, which can be used separately or in tandem.
+      tr
+        td 
+          a(href="http://blueprintcss.org/") Blueprint CSS
+        td 
+          | Blueprint is a CSS framework, which aims to cut down on your development time. 
+          | It gives you a solid foundation to build your project on top of, with an 
+          | easy-to-use grid, sensible typography, useful plugins, and even a stylesheet for printing.
+
+    p This is our simple initial HTML5 markup.
+
+    pre
+      <!DOCTYPE HTML>
+      <html>
+        <head>
+          <title></title>
+        </head>
+        <body>
+        </body>
+      </html>
+
+    pre
+
+  section
+    h2 Describing Posts in HTML
+    p
+     | The latest HTML5 tags are a perfect match for the semantic markup of a blog.
+     | Semantic markup means that the HTML tags used describe the content it contains.
+    p
+     | We'll use an <code>&lt;article&gt;</code> tag for each post and use CSS classes to specify the type
+     | of post it is. Tumblr has seven different types of posts as well as sets of photos and answer posts.
+
+    pre
+      <article class="text"></article>
+      <article class="photo"></article>
+      <article class="photoset"></article>
+      <article class="quote"></article>
+      <article class="link"></article>
+      <article class="chat"></article>
+      <article class="audio"></article>
+      <article class="video"></article>
+      <article class="answer"></article>
+
+    p
+      | We want to simulate each type of post so that we can style it.
+
+  section
+    h2 Extras
+
+  section
+    h2 Tumblr Theme Blocks and Variables
+    http://www.tumblr.com/docs/en/custom_themes
+
+textarea.template

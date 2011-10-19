@@ -37,9 +37,10 @@ app.get('/', function(req, res){
   });
 });
 
-app.post('/', function(req, res){
-  res.render('index', {
-    title: 'TumblrThis'
+app.get('/walkthrough', function(req, res){
+  res.render('walkthrough', {
+    title: 'Custom Template Walk Through',
+    layout: 'walkthrough_layout.jade'
   });
 });
 
