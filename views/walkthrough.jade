@@ -6,7 +6,21 @@ ol.steps
   li Introduction
   li Layout
   li Post Types
+    ul
+      li Text
+      li Photo
+      li Photo Set
+      li Quote
+      li Link
+      li Chat
+      li Audio
+      li Video
+      li Answer
   li Extras
+    ul
+      li Branding
+      li Navigation
+      li Disqus
   li Tumblr Theme Blocks and Variables
   li Where to go for help
 
@@ -63,14 +77,15 @@ article
     pre
       <!DOCTYPE HTML>
       <html>
+
         <head>
           <title></title>
         </head>
+
         <body>
         </body>
-      </html>
 
-    pre
+      </html>
 
   section
     h2 Describing Posts in HTML
@@ -93,13 +108,124 @@ article
       <article class="answer"></article>
 
     p
-      | We want to simulate each type of post so that we can style it.
+      | Before we can use this new HTML5 tag, we need to do a little extra work on our page.
+      | We'll add a script that makes HTML5 tags work in older versions of IE. Not a big deal.
+      | If a visitor's browser doesn't need it, the file won't be included.
+
+    pre
+      <!DOCTYPE HTML>
+      <html>
+
+        <head>
+          <title></title>
+          <!-- This JavaScript file will make older versions of IE recognize new HTML5 tags. -->
+          <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]-->
+        </head>
+
+        <body>
+        </body>
+
+      </html>
+
+    p 
+      | Let's add an element to hold our posts and give it an id value of <code>posts</code>.
+      | We can use this id to uniquely identify this element in CSS and JavaScript if needed.
+      | We'll add the <code>article</code> tags to this post.
+
+    pre
+      <!DOCTYPE HTML>
+      <html>
+
+        <head>
+          <title></title>
+          <!-- This JavaScript file will make older versions of IE recognize new HTML5 tags. -->
+          <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]-->
+        </head>
+
+        <body>
+          <!-- This element holds all of our posts. There is only one of them. -->
+          <div id="posts">
+            <article class="text"></article>
+            <article class="photo"></article>
+            <article class="photoset"></article>
+            <article class="quote"></article>
+            <article class="link"></article>
+            <article class="chat"></article>
+            <article class="audio"></article>
+            <article class="video"></article>
+            <article class="answer"></article>
+          </div>
+        </body>
+
+      </html>
+
+    p
+      | You may have noticed that we used a <code>class</code> attribute, <code>class="photo"</code> to 
+      | define what type of post the <code>article</code> tag contains.
+      | An alternative would have been to use an <code>id</code>, but we will likely have
+      | many posts of each type. An <code>id</code> is intended for use only when the element is unique.
+
+    p We want to simulate each type of post so that we can style them. Let's take each on individually.
+
+    p 
+      | We are going to start looking at the 
+      | <a href="http://www.tumblr.com/docs/en/custom_themes">Tumblr theme documentation</a>
+      | It can feel a little daunting,
+      | but at this point we'll just use it to inform our mark up for sample posts we'll create.
+
+    section
+      h3 Text
+      p 
+        | Text posts are made up of an optional title and a body.
+        | The body can contain HTML, so this may be an area that could use some targeted CSS styling.
+        | <a href="http://www.tumblr.com/docs/en/custom_themes#text-posts">More in the docs.</a>
+      pre
+        <!-- 
+          Post Type: Text
+          {block:Title}{/block:Title}
+          {Title}: Post Title
+          {Body}: 
+        -->
+        <article class="text">
+          <h2>Post Title</h2>
+          <p>
+            This is a sample post.
+          </p>
+        </article>
+        p
+          | Let's take this party over to JSFiddle for some styling...
+
+    section
+      h3 Photo
+      p 
+        | Photo posts can potentially have quite a bit of information, but the basics are
+        | a photo and a caption.
+        | <a href="http://www.tumblr.com/docs/en/custom_themes#photo-posts">More in the docs.</a>
+      pre
+        <!-- 
+          Post Type: Photo
+        -->
+        <article class="text">
+          <h2>Post Title</h2>
+          <p>
+            This is a sample post.
+          </p>
+        </article>
+
 
   section
     h2 Extras
+    section
+      h3 Branding
+    section
+      h3 Navigation
+    section
+      h3 Disqus
 
   section
     h2 Tumblr Theme Blocks and Variables
     http://www.tumblr.com/docs/en/custom_themes
-
-textarea.template
